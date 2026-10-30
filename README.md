@@ -1,77 +1,77 @@
 # Portfólio | Júlia Castilla
 
-Portfólio profissional desenvolvido com Streamlit para apresentar minha trajetória, meus serviços e meus projetos nas áreas de Análise de Dados, Business Intelligence e Marketing Digital.
+Portfólio profissional desenvolvido com Python e Streamlit para apresentar minha trajetória, meus serviços e meus projetos nas áreas de **Análise de Dados, Business Intelligence e Marketing Digital**.
 
 ## Contexto
 
 Sou Júlia Castilla, Analista de Dados, graduada em Marketing Digital pela Universidade Estácio de Sá, com formação profissional em Análise de Dados e Social Media Manager pela EBAC.
 
-Minha experiência com SEO, Social Media e indicadores de desempenho contribuiu para ampliar meu interesse pelo uso estratégico dos dados. Ao longo da minha formação em Análise de Dados, desenvolvi projetos envolvendo preparação, integração, análise e visualização de informações.
+Minha experiência com SEO, Social Media e indicadores de desempenho ampliou meu interesse pelo uso estratégico dos dados. Ao longo da minha formação, desenvolvi projetos envolvendo preparação, integração, análise e visualização de informações.
 
-Este portfólio reúne essas experiências em uma aplicação web, apresentando projetos com diferentes abordagens, ferramentas e áreas de aplicação.
+Este portfólio reúne essas experiências em uma aplicação web, facilitando a apresentação dos projetos, das tecnologias utilizadas e dos meus canais profissionais.
 
 ## Objetivo
 
-Construir um portfólio digital que permita:
+Desenvolver um portfólio digital para organizar e apresentar meus projetos de Análise de Dados, destacar minhas competências técnicas e disponibilizar informações sobre meus serviços e trajetória profissional.
 
-- Apresentar minha formação e trajetória profissional.
-- Organizar e divulgar meus projetos de Análise de Dados.
-- Demonstrar as tecnologias utilizadas nos projetos.
-- Apresentar serviços relacionados à análise de dados e ao marketing digital.
-- Facilitar o acesso aos repositórios dos projetos e aos meus canais de contato.
+A aplicação também busca facilitar a navegação entre os projetos e o acesso aos respectivos repositórios no GitHub.
 
 ## Desenvolvimento
 
-### Estruturação da aplicação
+### 1. Estruturação da aplicação
 
-A aplicação foi desenvolvida em Python, utilizando Streamlit para disponibilizar uma interface web.
+A aplicação foi desenvolvida em Python com Streamlit, utilizando HTML, CSS e JavaScript para a construção da interface.
 
-O conteúdo visual foi estruturado com HTML, CSS e JavaScript incorporados à aplicação, contemplando quatro seções principais:
+O portfólio foi organizado em quatro seções principais:
 
-- **Início:** apresentação do portfólio e acesso aos serviços e canais profissionais.
+- **Início:** apresentação do portfólio e links profissionais.
 - **Sobre mim:** formação, experiência e competências técnicas.
 - **Serviços:** apresentação de cinco serviços relacionados à análise de dados e ao marketing digital.
-- **Projetos:** catálogo de dez projetos, com descrições, tecnologias e links para seus respectivos repositórios.
+- **Projetos:** catálogo de dez projetos com descrições, tecnologias e links para seus repositórios.
 
-### Organização dos projetos
+### 2. Organização dos projetos
 
-Os dez projetos foram organizados em três categorias:
+Os projetos foram distribuídos em três categorias:
 
-| Categoria | Quantidade |
+| Categoria | Projetos |
 |---|---:|
 | Marketing & E-commerce | 4 |
 | Negócios & BI | 2 |
 | Outras Análises | 4 |
 | **Total** | **10** |
 
-A seção de projetos utiliza filtros implementados em JavaScript, permitindo selecionar uma categoria ou visualizar todos os projetos.
+Foram implementados filtros em JavaScript para permitir a visualização de todos os projetos ou apenas daqueles pertencentes à categoria selecionada.
 
-Cada projeto é apresentado em um cartão com imagem, título, descrição, tecnologias e link para o GitHub.
+Cada projeto apresenta título, descrição, imagem, tecnologias e acesso ao repositório correspondente.
 
-### Interface e navegação
+### 3. Interface e responsividade
+
+A interface utiliza uma identidade visual com tons de azul, lilás e roxo, além de seções organizadas para apresentar as informações de forma clara.
 
 Foram implementados:
 
-- Navegação entre as seções da página.
-- Menu adaptado para telas menores.
-- Layout responsivo com regras CSS para diferentes larguras de tela.
-- Filtros interativos para os projetos.
+- Navegação entre as seções.
+- Menu adaptado para dispositivos móveis.
+- Layouts responsivos definidos por regras CSS.
+- Cartões para apresentação dos serviços e projetos.
+- Filtros interativos de projetos.
 - Links para LinkedIn, GitHub e contato por e-mail.
-- Identidade visual com tons de azul, lilás e roxo.
-- Imagens armazenadas na pasta `assets`.
+- Imagens e favicon armazenados na pasta `assets`.
 
-As regras de responsividade estão presentes no código. Isso não representa, por si só, comprovação de testes em todos os dispositivos.
+As adaptações para diferentes tamanhos de tela estão implementadas no código, sem pressupor testes em todos os dispositivos.
 
-### Tecnologias utilizadas na aplicação
+### 4. Tecnologias utilizadas
 
-- **Python:** organização dos dados dos projetos, serviços e geração do conteúdo da página.
-- **Streamlit:** execução da aplicação web.
-- **HTML:** estrutura do conteúdo apresentado.
-- **CSS:** estilização, organização visual e responsividade.
-- **JavaScript:** filtros de projetos e interações de navegação.
-- **Pillow:** carregamento da imagem utilizada como ícone da página.
+| Tecnologia | Aplicação |
+|---|---|
+| Python | Estruturação das informações e geração do conteúdo |
+| Streamlit | Execução da aplicação web |
+| HTML | Organização dos elementos da interface |
+| CSS | Estilização e responsividade |
+| JavaScript | Filtros de projetos e navegação interativa |
+| Pillow | Carregamento do favicon |
 
-### Estrutura dos arquivos
+### 5. Estrutura do repositório
 
 ```text
 portfolio-julia-castilla/
@@ -85,43 +85,47 @@ portfolio-julia-castilla/
     └── imagens dos projetos
 ```
 
-### Execução local
+### 6. Execução local
 
-Instale as dependências:
+Para executar o portfólio localmente, instale as dependências:
 
 ```bash
 python -m pip install -r requirements.txt
 ```
 
-Execute a aplicação:
+Depois, execute:
 
 ```bash
 python -m streamlit run app.py
 ```
 
+### 7. Publicação
+
+O repositório foi preparado para implantação no Streamlit Community Cloud, utilizando o arquivo `app.py` como ponto de entrada e o `requirements.txt` para declarar as dependências.
+
 ## Resultados
 
-O código disponibilizado contém uma aplicação de portfólio com:
+O desenvolvimento resultou no código de uma aplicação de portfólio contendo:
 
 - Quatro seções principais.
-- Cinco serviços apresentados.
-- Dez projetos organizados por categoria.
-- Filtros interativos de projetos.
-- Links para os repositórios e canais profissionais.
-- Regras de adaptação visual para computadores, tablets e celulares.
+- Cinco serviços profissionais.
+- Dez projetos organizados em três categorias.
+- Filtros interativos para navegação entre projetos.
+- Links para repositórios e canais de contato.
+- Regras de responsividade para diferentes larguras de tela.
 
-O portfólio apresenta projetos que utilizam tecnologias como Python, SQL, Google BigQuery, Power BI, Looker Studio, Pandas e Plotly.
+Os projetos apresentados envolvem ferramentas como Python, SQL, Google BigQuery, Power BI, Looker Studio, Pandas e Plotly, conforme as tecnologias indicadas em seus respectivos cartões.
 
-Essas tecnologias pertencem aos projetos apresentados e não devem ser confundidas com as dependências necessárias para executar a aplicação do portfólio.
+Essas ferramentas representam os projetos do portfólio e não necessariamente as dependências da aplicação web.
 
 ## Habilidades Demonstradas
 
-- Desenvolvimento de aplicações web com Streamlit.
-- Estruturação de conteúdo com HTML.
-- Estilização e responsividade com CSS.
-- Implementação de interações com JavaScript.
-- Organização de informações e projetos em Python.
-- Apresentação e documentação de projetos técnicos.
+- Desenvolvimento de aplicações com Python e Streamlit.
+- Estruturação de interfaces com HTML e CSS.
+- Implementação de layouts responsivos.
+- Criação de interações com JavaScript.
+- Organização e apresentação de projetos técnicos.
+- Documentação de aplicações e instruções de execução.
 
 ---
 
