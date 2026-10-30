@@ -241,6 +241,28 @@ section,#servicos{scroll-margin-top:80px}
 .filter{flex:1 1 calc(50% - 8px)}.service-card{padding:23px}.footer-links{flex-wrap:wrap}
 }
 @media(max-width:360px){.container{padding-inline:14px}.logo{font-size:22px}.hero-copy h1{font-size:25px}.filter{font-size:13px;padding:11px 8px}}
+/* Ajustes mobile aprovados por Júlia (30/10/2026): somente telas até 760px. */
+@media(max-width:760px){
+  /* Imagem do hero acima da chamada, CTA e ícones; desktop permanece intacto. */
+  .hero-art{order:-1;margin:0}
+  .hero-copy{order:1}
+  /* Dropdown estreito à direita, sem expandir a página ou deslocar o conteúdo. */
+  .nav-wrap{position:relative}
+  .menu{
+    display:none;position:absolute;top:calc(100% + 8px);right:0;left:auto;
+    width:min(205px,calc(100vw - 36px));max-height:calc(100dvh - 90px);
+    padding:8px;background:#fff;border:1px solid #eeeaf5;border-radius:14px;
+    box-shadow:0 12px 30px rgba(60,45,92,.14);z-index:40;
+    flex-direction:column;align-items:stretch;gap:0;overflow-y:auto;
+  }
+  .menu.open{display:flex}
+  .menu a{display:block;width:100%;padding:11px 14px;font-size:16px;border-radius:9px;text-align:left}
+  .menu a:hover,.menu a.active{background:#f3f7fb;color:#527FA8}
+  .menu a:hover::after,.menu a.active::after{left:14px;right:auto;bottom:6px;width:34px}
+  /* Na seção Sobre, só o título muda de alinhamento. */
+  .about-text .about-heading{text-align:center}
+}
+
 </style></head><body>
 <header class="topbar"><div class="container nav-wrap"><a class="logo" href="#inicio" aria-label="Júlia Castilla, início">J<span class="logo-u">u</span>lia Castilla</a><nav class="menu" id="menu"><a href="#inicio" class="active">Início</a><a href="#sobre">Sobre</a><a href="#servicos">Serviços</a><a href="#projetos">Projetos</a></nav><a class="cta" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=juliacruz943%40gmail.com&amp;su=Contato%20pelo%20portf%C3%B3lio%20de%20J%C3%BAlia%20Castilla" target="_blank" rel="noopener noreferrer" aria-label="Vamos conversar: enviar e-mail para Júlia Castilla pelo Gmail">Vamos conversar →</a><button class="hamburger" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false" onclick="const m=document.getElementById('menu');const o=m.classList.toggle('open');this.setAttribute('aria-expanded',String(o));this.setAttribute('aria-label',o?'Fechar menu':'Abrir menu')">☰</button></div></header>
 <main><section class="container hero" id="inicio"><div class="hero-copy"><h1>Transformando<br><span class="hero-line">dados em <span class="highlight">estratégias</span></span><br>para o seu negócio.</h1><a class="primary" href="#servicos">Conheça meus serviços&nbsp; →</a><div class="social"><a href="https://www.linkedin.com/in/juliacastilla" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">in</a><a href="https://github.com/Jucastilla" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1-.02-1.97-3.2.7-3.88-1.54-3.88-1.54-.52-1.32-1.28-1.67-1.28-1.67-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.47.11-3.05 0 0 .96-.31 3.16 1.18A11 11 0 0 1 12 6.07c.98 0 1.97.13 2.89.39 2.2-1.49 3.16-1.18 3.16-1.18.62 1.58.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.7 5.4-5.27 5.69.41.35.78 1.05.78 2.12 0 1.53-.01 2.76-.01 3.13 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg></a><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=juliacruz943%40gmail.com&amp;su=Contato%20pelo%20portf%C3%B3lio%20de%20J%C3%BAlia%20Castilla" target="_blank" rel="noopener noreferrer" title="Enviar e-mail" aria-label="Enviar e-mail">✉</a></div></div><div class="hero-art"><img src="__HERO__" alt="Retrato futurista com circuitos luminosos e elementos de análise de dados"></div></section>
@@ -271,6 +293,8 @@ function goToSection(id){
   if(window.history && window.history.replaceState){window.history.replaceState(null,'','#'+id);}
   document.querySelectorAll('.menu a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+id));
   document.getElementById('menu').classList.remove('open');
+  const menuButton=document.querySelector('.hamburger');
+  if(menuButton){menuButton.setAttribute('aria-expanded','false');menuButton.setAttribute('aria-label','Abrir menu');}
 }
 document.querySelectorAll('.menu a, .logo, .hero-copy .primary').forEach(a=>a.addEventListener('click',e=>{
   const href=a.getAttribute('href')||'';
@@ -278,6 +302,20 @@ document.querySelectorAll('.menu a, .logo, .hero-copy .primary').forEach(a=>a.ad
   e.preventDefault();
   goToSection(href.slice(1));
 }));
+// Fecha o dropdown ao tocar fora dele ou pressionar Esc.
+document.addEventListener('click',event=>{
+  const menu=document.getElementById('menu');
+  const button=document.querySelector('.hamburger');
+  if(!menu || !button || menu.contains(event.target) || button.contains(event.target))return;
+  menu.classList.remove('open');button.setAttribute('aria-expanded','false');button.setAttribute('aria-label','Abrir menu');
+});
+document.addEventListener('keydown',event=>{
+  if(event.key!=='Escape')return;
+  const menu=document.getElementById('menu');const button=document.querySelector('.hamburger');
+  if(menu && button && menu.classList.contains('open')){
+    menu.classList.remove('open');button.setAttribute('aria-expanded','false');button.setAttribute('aria-label','Abrir menu');button.focus();
+  }
+});
 // Ao abrir um endereço com #servicos, mostra a seção abaixo do menu.
 window.addEventListener('load',()=>{const id=decodeURIComponent(location.hash.slice(1));if(id && document.getElementById(id)){setTimeout(()=>goToSection(id),80);}});
 const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){const id=entry.target.id;document.querySelectorAll('.menu a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+id))}})},{rootMargin:'-20% 0px -60% 0px'});document.querySelectorAll('main section[id]').forEach(s=>observer.observe(s));
