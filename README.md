@@ -2,76 +2,111 @@
 
 Portfólio profissional desenvolvido com Python e Streamlit para apresentar minha trajetória, meus serviços e meus projetos nas áreas de **Análise de Dados, Business Intelligence e Marketing Digital**.
 
+🌐 **[Acessar meu portfólio online](LINK_DO_PORTFOLIO)**
+
 ## Contexto
 
 Sou Júlia Castilla, Analista de Dados, graduada em Marketing Digital pela Universidade Estácio de Sá, com formação profissional em Análise de Dados e Social Media Manager pela EBAC.
 
-Minha experiência com SEO, Social Media e indicadores de desempenho ampliou meu interesse pelo uso estratégico dos dados. Ao longo da minha formação, desenvolvi projetos envolvendo preparação, integração, análise e visualização de informações.
+Minha experiência com SEO, Social Media e análise de indicadores de desempenho ampliou meu interesse pelo uso estratégico dos dados. O contato com métricas, comportamento do público e avaliação de resultados contribuiu para o desenvolvimento de uma visão analítica, aprofundada por meio da formação em Análise de Dados.
 
-Este portfólio reúne essas experiências em uma aplicação web, facilitando a apresentação dos projetos, das tecnologias utilizadas e dos meus canais profissionais.
+Ao longo dessa trajetória, desenvolvi projetos envolvendo preparação, integração, análise e visualização de dados. Este portfólio reúne essas experiências em uma aplicação web, organizando os projetos, as tecnologias utilizadas e os canais de contato profissional.
 
 ## Objetivo
 
-Desenvolver um portfólio digital para organizar e apresentar meus projetos de Análise de Dados, destacar minhas competências técnicas e disponibilizar informações sobre meus serviços e trajetória profissional.
+Desenvolver um portfólio digital para apresentar minha trajetória profissional, minhas competências técnicas e os projetos realizados em diferentes áreas de aplicação da Análise de Dados.
 
-A aplicação também busca facilitar a navegação entre os projetos e o acesso aos respectivos repositórios no GitHub.
+A aplicação foi estruturada para facilitar a navegação entre os projetos, permitir a visualização por categorias e disponibilizar acesso aos respectivos repositórios no GitHub.
+
+Também contempla a apresentação de serviços relacionados à Análise de Dados e ao Marketing Digital.
 
 ## Desenvolvimento
 
 ### 1. Estruturação da aplicação
 
-A aplicação foi desenvolvida em Python com Streamlit, utilizando HTML, CSS e JavaScript para a construção da interface.
+A aplicação foi desenvolvida em Python, utilizando Streamlit para executar a interface web e HTML, CSS e JavaScript para organizar os elementos visuais e as interações.
 
-O portfólio foi organizado em quatro seções principais:
+O conteúdo foi dividido em quatro seções:
 
-- **Início:** apresentação do portfólio e links profissionais.
-- **Sobre mim:** formação, experiência e competências técnicas.
+- **Início:** apresentação do portfólio, acesso aos serviços e links profissionais.
+- **Sobre mim:** trajetória, formação e competências técnicas.
 - **Serviços:** apresentação de cinco serviços relacionados à análise de dados e ao marketing digital.
 - **Projetos:** catálogo de dez projetos com descrições, tecnologias e links para seus repositórios.
 
 ### 2. Organização dos projetos
 
-Os projetos foram distribuídos em três categorias:
+Foram cadastrados dez projetos, distribuídos em três categorias:
 
-| Categoria | Projetos |
+| Categoria | Quantidade |
 |---|---:|
 | Marketing & E-commerce | 4 |
 | Negócios & BI | 2 |
 | Outras Análises | 4 |
 | **Total** | **10** |
 
-Foram implementados filtros em JavaScript para permitir a visualização de todos os projetos ou apenas daqueles pertencentes à categoria selecionada.
+Os projetos apresentados são:
 
-Cada projeto apresenta título, descrição, imagem, tecnologias e acesso ao repositório correspondente.
+**Marketing & E-commerce**
+- Análise do Mercado Publicitário Audiovisual (ANCINE)
+- Análise de Engajamento do Hacker News
+- Análise de Insatisfação de Clientes da Olist
+- Análise Exploratória de E-commerce
 
-### 3. Interface e responsividade
+**Negócios & BI**
+- Análise Estratégica de Vendas
+- Análise de Dados de Restaurante
 
-A interface utiliza uma identidade visual com tons de azul, lilás e roxo, além de seções organizadas para apresentar as informações de forma clara.
+**Outras Análises**
+- Projeto Nossa Entrega
+- London Crime Analysis
+- Análise de Dados da COVID-19
+- Calculadora em Python e Linux
+
+Cada projeto é apresentado em um cartão contendo imagem, título, descrição, tecnologias e link para o respectivo repositório.
+
+### 3. Implementação dos filtros
+
+Foram implementados filtros em JavaScript para permitir a seleção de projetos por categoria.
+
+A interface disponibiliza quatro opções:
+
+- Todos
+- Marketing & E-commerce
+- Negócios & BI
+- Outras Análises
+
+Ao selecionar uma categoria, o código altera a exibição dos cartões conforme a classificação cadastrada.
+
+### 4. Desenvolvimento da interface e responsividade
+
+A identidade visual utiliza tons de azul, lilás e roxo, com alternância de fundos claros entre as seções.
 
 Foram implementados:
 
-- Navegação entre as seções.
-- Menu adaptado para dispositivos móveis.
-- Layouts responsivos definidos por regras CSS.
-- Cartões para apresentação dos serviços e projetos.
-- Filtros interativos de projetos.
+- Navegação entre as seções da página.
+- Menu de navegação adaptado para telas menores.
+- Regras CSS de responsividade para diferentes larguras de tela.
+- Cartões de serviços e projetos.
+- Filtros interativos.
 - Links para LinkedIn, GitHub e contato por e-mail.
 - Imagens e favicon armazenados na pasta `assets`.
 
-As adaptações para diferentes tamanhos de tela estão implementadas no código, sem pressupor testes em todos os dispositivos.
+O código contém adaptações para computadores, tablets e celulares. A existência dessas regras não comprova testes de funcionamento em todos os dispositivos.
 
-### 4. Tecnologias utilizadas
+### 5. Tecnologias utilizadas
 
-| Tecnologia | Aplicação |
+| Tecnologia | Utilização |
 |---|---|
-| Python | Estruturação das informações e geração do conteúdo |
+| Python | Organização das informações e geração do conteúdo |
 | Streamlit | Execução da aplicação web |
-| HTML | Organização dos elementos da interface |
+| HTML | Estruturação da interface |
 | CSS | Estilização e responsividade |
-| JavaScript | Filtros de projetos e navegação interativa |
+| JavaScript | Filtros e navegação interativa |
 | Pillow | Carregamento do favicon |
 
-### 5. Estrutura do repositório
+As tecnologias apresentadas nos cartões dos projetos, como SQL, Google BigQuery, Power BI, Looker Studio, Pandas e Plotly, correspondem aos respectivos trabalhos e não necessariamente às dependências da aplicação do portfólio.
+
+### 6. Estrutura do repositório
 
 ```text
 portfolio-julia-castilla/
@@ -82,55 +117,91 @@ portfolio-julia-castilla/
     ├── favicon.png
     ├── hero.jpg
     ├── sobre.jpg
-    └── imagens dos projetos
+    ├── ancine.jpg
+    ├── hacker.jpg
+    ├── olist.jpg
+    ├── ecommerce.jpg
+    ├── vendas.jpg
+    ├── restaurante.jpg
+    ├── nossa-entrega.jpg
+    ├── london.jpg
+    ├── covid.jpg
+    └── calculadora.jpg
 ```
 
-### 6. Execução local
+### 7. Execução local
 
-Para executar o portfólio localmente, instale as dependências:
+Para executar o portfólio localmente, é necessário ter o Python instalado.
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/Jucastilla/portfolio-julia-castilla.git
+```
+
+Acesse a pasta do projeto:
+
+```bash
+cd portfolio-julia-castilla
+```
+
+Instale as dependências:
 
 ```bash
 python -m pip install -r requirements.txt
 ```
 
-Depois, execute:
+Inicie a aplicação:
 
 ```bash
 python -m streamlit run app.py
 ```
 
-### 7. Publicação
+### 8. Publicação online
 
-O repositório foi preparado para implantação no Streamlit Community Cloud, utilizando o arquivo `app.py` como ponto de entrada e o `requirements.txt` para declarar as dependências.
+O projeto foi configurado para implantação no Streamlit Community Cloud, utilizando:
+
+- Repositório: `Jucastilla/portfolio-julia-castilla`
+- Branch: `main`
+- Arquivo principal: `app.py`
+- Dependências: `requirements.txt`
+
+O processo de implantação foi iniciado na plataforma. O endereço público poderá ser acrescentado após a confirmação de que a aplicação está acessível.
 
 ## Resultados
 
-O desenvolvimento resultou no código de uma aplicação de portfólio contendo:
+O desenvolvimento resultou no código de uma aplicação de portfólio que reúne:
 
-- Quatro seções principais.
-- Cinco serviços profissionais.
-- Dez projetos organizados em três categorias.
-- Filtros interativos para navegação entre projetos.
-- Links para repositórios e canais de contato.
-- Regras de responsividade para diferentes larguras de tela.
+- **4 seções principais** de apresentação e navegação.
+- **5 serviços profissionais** relacionados à análise de dados e ao marketing digital.
+- **10 projetos** organizados em três categorias.
+- **4 opções de filtragem** para os projetos.
+- Cartões com descrições, tecnologias e links para os repositórios.
+- Navegação entre seções e acesso aos canais profissionais.
+- Regras de responsividade para diferentes tamanhos de tela.
 
-Os projetos apresentados envolvem ferramentas como Python, SQL, Google BigQuery, Power BI, Looker Studio, Pandas e Plotly, conforme as tecnologias indicadas em seus respectivos cartões.
+O portfólio reúne projetos que abordam temas como mercado publicitário audiovisual, engajamento digital, comportamento de clientes, vendas, dados criminais e dados da COVID-19.
 
-Essas ferramentas representam os projetos do portfólio e não necessariamente as dependências da aplicação web.
+As informações e os resultados específicos de cada análise devem ser consultados nos respectivos repositórios.
 
 ## Habilidades Demonstradas
 
-- Desenvolvimento de aplicações com Python e Streamlit.
-- Estruturação de interfaces com HTML e CSS.
-- Implementação de layouts responsivos.
-- Criação de interações com JavaScript.
+- Desenvolvimento de aplicações web com Python e Streamlit.
+- Estruturação de interfaces com HTML.
+- Estilização e implementação de layouts responsivos com CSS.
+- Implementação de filtros e interações com JavaScript.
 - Organização e apresentação de projetos técnicos.
-- Documentação de aplicações e instruções de execução.
+- Estruturação de conteúdo para comunicação profissional.
+- Documentação e organização de repositórios no GitHub.
 
 ---
 
-**Júlia Castilla**
+## Contato
 
+**Júlia Castilla**  
 Análise de Dados | Marketing Digital
 
-[LinkedIn](https://www.linkedin.com/in/juliacastilla) | [GitHub](https://github.com/Jucastilla) | [E-mail](mailto:juliacruz943@gmail.com)
+🌐 [Portfólio online](LINK_DO_PORTFOLIO)  
+💼 [LinkedIn](https://www.linkedin.com/in/juliacastilla)  
+💻 [GitHub](https://github.com/Jucastilla)  
+✉️ [E-mail](mailto:juliacruz943@gmail.com)
