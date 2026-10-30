@@ -84,7 +84,9 @@ A identidade visual utiliza tons de azul, lilás e roxo, com alternância de fun
 Foram implementados:
 
 - Navegação entre as seções da página.
-- Menu de navegação adaptado para telas menores.
+- Menu de navegação adaptado para telas menores, com apresentação suspensa e compacta, alinhada à direita.
+- Reorganização responsiva da seção inicial, posicionando a imagem de destaque antes do título, do botão de serviços e dos ícones de contato em dispositivos móveis.
+- Adaptação da seção "Sobre mim" para telas menores, mantendo a imagem acima do conteúdo, o título centralizado e os parágrafos justificados.
 - Regras CSS de responsividade para diferentes larguras de tela.
 - Cartões de serviços e projetos.
 - Filtros interativos.
@@ -159,14 +161,16 @@ python -m streamlit run app.py
 
 ### 8. Publicação online
 
-O projeto foi configurado para implantação no Streamlit Community Cloud, utilizando:
+O projeto está publicado no Streamlit Community Cloud, utilizando:
 
 - Repositório: `Jucastilla/portfolio-julia-castilla`
 - Branch: `main`
 - Arquivo principal: `app.py`
 - Dependências: `requirements.txt`
 
-O processo de implantação foi iniciado na plataforma. O endereço público poderá ser acrescentado após a confirmação de que a aplicação está acessível.
+A aplicação pode ser acessada publicamente pelo endereço:
+
+**[https://julia-castilla-portfolio.streamlit.app/](https://julia-castilla-portfolio.streamlit.app/)**
 
 ## Resultados
 
@@ -178,7 +182,7 @@ O desenvolvimento resultou no código de uma aplicação de portfólio que reún
 - **4 opções de filtragem** para os projetos.
 - Cartões com descrições, tecnologias e links para os repositórios.
 - Navegação entre seções e acesso aos canais profissionais.
-- Regras de responsividade para diferentes tamanhos de tela.
+- Regras de responsividade para diferentes tamanhos de tela, incluindo reorganização da seção inicial, menu compacto para dispositivos móveis e ajustes de apresentação da seção "Sobre mim".
 
 O portfólio reúne projetos que abordam temas como mercado publicitário audiovisual, engajamento digital, comportamento de clientes, vendas, dados criminais e dados da COVID-19.
 
