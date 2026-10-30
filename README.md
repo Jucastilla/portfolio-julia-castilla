@@ -2,7 +2,7 @@
 
 Portfólio profissional desenvolvido com Python e Streamlit para apresentar minha trajetória, meus serviços e meus projetos nas áreas de **Análise de Dados, Business Intelligence e Marketing Digital**.
 
-🌐 **[Acessar meu portfólio online](LINK_DO_PORTFOLIO)**
+**[Acessar meu portfólio online](https://julia-castilla-portfolio.streamlit.app/)**
 
 ## Contexto
 
@@ -201,7 +201,7 @@ As informações e os resultados específicos de cada análise devem ser consult
 **Júlia Castilla**  
 Análise de Dados | Marketing Digital
 
-🌐 [Portfólio online](LINK_DO_PORTFOLIO)  
-💼 [LinkedIn](https://www.linkedin.com/in/juliacastilla)  
-💻 [GitHub](https://github.com/Jucastilla)  
-✉️ [E-mail](mailto:juliacruz943@gmail.com)
+[Portfólio online](https://julia-castilla-portfolio.streamlit.app/)  
+[LinkedIn](https://www.linkedin.com/in/juliacastilla)  
+[GitHub](https://github.com/Jucastilla)  
+[E-mail](mailto:juliacruz943@gmail.com)
