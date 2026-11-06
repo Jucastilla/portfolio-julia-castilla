@@ -293,21 +293,24 @@ html = r"""
 
 html {
   height: 100%;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  overflow-x: hidden;
+  overflow: hidden;
   scroll-behavior: smooth;
-  scroll-padding-top: 100px;
 }
 
 body {
+  height: 100dvh;
   margin: 0;
   padding-top: 88px;
-  min-height: 100%;
+  padding-bottom: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
   background: #FFFFFF;
   color: var(--ink);
   font-family: "DM Sans", sans-serif;
-  overflow-x: hidden;
 }
 
 a {
@@ -1504,10 +1507,10 @@ function goToSection(id) {
 
   const top =
     target.getBoundingClientRect().top +
-    window.scrollY -
+    document.body.scrollTop -
     offset;
 
-  window.scrollTo({
+  document.body.scrollTo({
     top: Math.max(0, top),
     behavior: "smooth"
   });
@@ -1604,6 +1607,7 @@ const observer = new IntersectionObserver(entries => {
   });
 
 }, {
+  root: document.body,
   rootMargin: "-20% 0px -60% 0px"
 });
 
