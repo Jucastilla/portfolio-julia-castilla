@@ -1148,6 +1148,16 @@ body {
   scroll-padding-top: 16px;
   -webkit-overflow-scrolling: touch;
 }
+/* Espaço real DENTRO do contêiner rolável, após o último projeto.
+   Evita que a barra inferior do navegador cubra o fim do último cartão. */
+.mobile-scroll-end { height: 0; flex-shrink: 0; }
+@media (max-width: 760px) {
+  .mobile-scroll-end {
+    height: calc(280px + env(safe-area-inset-bottom, 0px));
+    min-height: 280px;
+    pointer-events: none;
+  }
+}
 .page-scroll section { scroll-margin-top: 16px; }
 @media (max-width: 760px) {
   .topbar { flex-basis: 72px; height: 72px; }
@@ -1378,6 +1388,9 @@ body {
 </section>
 
 </main>
+
+<!-- Reserva de rolagem para o ultimo cartao no Safari/Brave mobile. -->
+<div class="mobile-scroll-end" aria-hidden="true"></div>
 
 </div><!-- fim da area rolavel -->
 
