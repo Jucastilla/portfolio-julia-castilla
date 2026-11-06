@@ -1643,5 +1643,5 @@ html = (
 components.html(
     html,
     height=850,
-    scrolling=False
+    scrolling=True
 )
