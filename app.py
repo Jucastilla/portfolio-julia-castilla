@@ -1203,11 +1203,18 @@ body {
 }
 /* Espaço real DENTRO do contêiner rolável, após o último projeto.
    Evita que a barra inferior do navegador cubra o fim do último cartão. */
-.mobile-scroll-end { height: 0; flex-shrink: 0; }
+/* Respiro ao final dos projetos no desktop, sem rodapé. */
+.mobile-scroll-end {
+  height: 280px;
+  flex-shrink: 0;
+  background: #FAF8FC;
+  pointer-events: none;
+}
 @media (max-width: 760px) {
   .mobile-scroll-end {
     height: calc(280px + env(safe-area-inset-bottom, 0px));
     min-height: 280px;
+    background: transparent;
     pointer-events: none;
   }
 }
