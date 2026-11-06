@@ -791,14 +791,13 @@ section {
 }
 
 /* ==========================================
-   TEXTO JUSTIFICADO
+   ALINHAMENTO DOS TEXTOS
+   Sobre mim: justificado, sem hifenizacao.
+   Servicos e projetos: alinhados a esquerda,
+   no desktop e no mobile.
 ========================================== */
 
-/* Justificação sem hifenização, com composição de linhas mais equilibrada.
-   text-wrap: pretty melhora quebras quando o navegador oferece suporte. */
-.about-text p,
-.service-card p,
-.project-body p {
+.about-text p {
   text-align: justify;
   text-align-last: left;
   text-justify: inter-word;
@@ -813,12 +812,24 @@ section {
   letter-spacing: 0.008em;
 }
 
-/* Melhora a composição dos parágrafos em telas menores,
-   sem retirar o alinhamento justificado nem inserir hífens. */
+.service-card p,
+.project-body p {
+  text-align: left;
+  text-align-last: left;
+  text-wrap: pretty;
+  hyphens: none;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  word-break: normal;
+  overflow-wrap: break-word;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures;
+  letter-spacing: normal;
+  word-spacing: normal;
+}
+
 @media (max-width: 760px) {
-  .about-text p,
-  .service-card p,
-  .project-body p {
+  .about-text p {
     letter-spacing: 0.012em;
     word-spacing: -0.015em;
   }
