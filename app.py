@@ -672,7 +672,7 @@ section {
 
 .projects {
   background: #FAF8FC;
-  padding: 86px 0 108px;
+  padding: 86px 0 145px;
 }
 
 .filters {
@@ -807,60 +807,6 @@ section {
   -webkit-hyphens: none;
   word-break: normal;
   overflow-wrap: normal;
-}
-
-/* ==========================================
-   RODAPÉ
-========================================== */
-
-.footer {
-  display: block;
-  position: relative;
-  width: 100%;
-  padding: 28px 0 max(28px, env(safe-area-inset-bottom));
-  background: #FFFFFF;
-  border-top: 1px solid #EDEAF3;
-  color: #4F4073;
-}
-
-.footer-main {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  padding-bottom: 22px;
-}
-
-.footer-name {
-  font-family: "Outfit", sans-serif;
-  font-size: 19px;
-  font-weight: 700;
-  color: #3C2D5C;
-}
-
-.footer-role {
-  margin-top: 5px;
-  font-size: 13px;
-}
-
-.footer-links {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 22px;
-  flex-wrap: wrap;
-  font-size: 13px;
-}
-
-.footer-links a:hover {
-  color: #527FA8;
-}
-
-.footer-bottom {
-  border-top: 1px solid #EDE8F3;
-  padding-top: 15px;
-  color: #6E6284;
-  font-size: 12px;
 }
 
 /* ==========================================
@@ -1088,7 +1034,7 @@ section {
 
   .services,
   .projects {
-    padding: 58px 0 65px;
+    padding: 58px 0 95px;
   }
 
   .service-grid {
@@ -1127,10 +1073,6 @@ section {
     padding: 12px 14px;
     font-size: 14px;
     white-space: normal;
-  }
-
-  .footer-main {
-    flex-wrap: wrap;
   }
 }
 
@@ -1171,15 +1113,6 @@ section {
   .service-card {
     padding: 23px;
   }
-
-  .footer-main {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .footer-links {
-    justify-content: flex-start;
-  }
 }
 
 
@@ -1216,20 +1149,11 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 .page-scroll section { scroll-margin-top: 16px; }
-.page-scroll .footer {
-  position: static;
-  display: block;
-  width: 100%;
-  padding-bottom: max(32px, env(safe-area-inset-bottom));
-}
 @media (max-width: 760px) {
   .topbar { flex-basis: 72px; height: 72px; }
   .page-scroll { scroll-padding-top: 12px; }
   .page-scroll section { scroll-margin-top: 12px; }
-  .page-scroll .footer {
-    padding-bottom: max(48px, env(safe-area-inset-bottom));
   }
-}
 </style>
 </head>
 
@@ -1455,58 +1379,6 @@ body {
 
 </main>
 
-<!-- ==========================================
-     RODAPÉ
-========================================== -->
-
-<footer class="footer">
-
-  <div class="container">
-
-    <div class="footer-main">
-
-      <div class="footer-identity">
-
-        <div class="footer-name">
-          Júlia Castilla
-        </div>
-
-        <div class="footer-role">
-          Análise de Dados | Marketing Digital
-        </div>
-
-      </div>
-
-      <div class="footer-links">
-
-        <a href="https://www.linkedin.com/in/juliacastilla"
-           target="_blank"
-           rel="noopener noreferrer">
-          LinkedIn
-        </a>
-
-        <a href="https://github.com/Jucastilla"
-           target="_blank"
-           rel="noopener noreferrer">
-          GitHub
-        </a>
-
-        <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=juliacruz943%40gmail.com"
-           target="_blank"
-           rel="noopener noreferrer">
-          E-mail
-        </a>
-
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      © <span id="year"></span>
-      Júlia Castilla · Todos os direitos reservados.
-    </div>
-
-  </div>
-</footer>
 </div><!-- fim da area rolavel -->
 
 <!-- ==========================================
@@ -1514,10 +1386,6 @@ body {
 ========================================== -->
 
 <script>
-
-// Ano automático do rodapé.
-document.getElementById("year").textContent =
-  new Date().getFullYear();
 
 const menu = document.getElementById("menu");
 const menuButton = document.querySelector(".hamburger");
