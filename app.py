@@ -507,8 +507,8 @@ section {
 
 @media (min-width: 761px) {
   .social a .email-icon-mobile {
-    width: 29px;
-    height: 29px;
+    width: 24px;
+    height: 24px;
   }
 }
 
