@@ -794,15 +794,52 @@ section {
    TEXTO JUSTIFICADO
 ========================================== */
 
+/* Justificação sem hifenização, com composição de linhas mais equilibrada.
+   text-wrap: pretty melhora quebras quando o navegador oferece suporte. */
 .about-text p,
 .service-card p,
 .project-body p {
   text-align: justify;
   text-align-last: left;
+  text-justify: inter-word;
+  text-wrap: pretty;
   hyphens: none;
   -webkit-hyphens: none;
+  -ms-hyphens: none;
   word-break: normal;
-  overflow-wrap: normal;
+  overflow-wrap: break-word;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures;
+  letter-spacing: 0.008em;
+}
+
+/* Melhora a composição dos parágrafos em telas menores,
+   sem retirar o alinhamento justificado nem inserir hífens. */
+@media (max-width: 760px) {
+  .about-text p,
+  .service-card p,
+  .project-body p {
+    letter-spacing: 0.012em;
+    word-spacing: -0.015em;
+  }
+  .service-card {
+    padding-inline: 20px;
+  }
+  .project-body {
+    padding-inline: 7px;
+  }
+}
+
+@media (max-width: 520px) {
+  .project-card {
+    border-width: 5px;
+  }
+  .project-body {
+    padding-inline: 5px;
+  }
+  .service-card {
+    padding-inline: 19px;
+  }
 }
 
 /* ==========================================
@@ -1115,7 +1152,7 @@ section {
   }
 
   .service-card {
-    padding: 23px;
+    padding: 23px 19px;
   }
 }
 
