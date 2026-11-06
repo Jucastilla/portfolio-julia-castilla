@@ -1,4 +1,3 @@
-
 """Portfólio de Júlia Castilla — Streamlit.
 Execute com: python -m streamlit run app.py
 """
@@ -1183,6 +1182,54 @@ section {
   }
 }
 
+
+/* Estrutura unica de rolagem: menu fora da area rolavel */
+html, body {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.topbar {
+  position: relative !important;
+  top: auto;
+  left: auto;
+  right: auto;
+  flex: 0 0 88px;
+  height: 88px;
+  width: 100%;
+}
+.page-scroll {
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  scroll-padding-top: 16px;
+  -webkit-overflow-scrolling: touch;
+}
+.page-scroll section { scroll-margin-top: 16px; }
+.page-scroll .footer {
+  position: static;
+  display: block;
+  width: 100%;
+  padding-bottom: max(32px, env(safe-area-inset-bottom));
+}
+@media (max-width: 760px) {
+  .topbar { flex-basis: 72px; height: 72px; }
+  .page-scroll { scroll-padding-top: 12px; }
+  .page-scroll section { scroll-margin-top: 12px; }
+  .page-scroll .footer {
+    padding-bottom: max(48px, env(safe-area-inset-bottom));
+  }
+}
 </style>
 </head>
 
@@ -1227,6 +1274,7 @@ section {
   </div>
 </header>
 
+<div class="page-scroll" id="pageScroll">
 <main>
 
 <!-- ==========================================
@@ -1459,6 +1507,7 @@ section {
 
   </div>
 </footer>
+</div><!-- fim da area rolavel -->
 
 <!-- ==========================================
      JAVASCRIPT
@@ -1502,15 +1551,12 @@ function goToSection(id) {
     return;
   }
 
-  const header = document.querySelector(".topbar");
-  const offset = (header ? header.offsetHeight : 88) + 8;
+  const scroller = document.getElementById("pageScroll");
+  const top = target.getBoundingClientRect().top -
+              scroller.getBoundingClientRect().top +
+              scroller.scrollTop - 8;
 
-  const top =
-    target.getBoundingClientRect().top +
-    document.body.scrollTop -
-    offset;
-
-  document.body.scrollTo({
+  document.getElementById("pageScroll").scrollTo({
     top: Math.max(0, top),
     behavior: "smooth"
   });
@@ -1607,7 +1653,7 @@ const observer = new IntersectionObserver(entries => {
   });
 
 }, {
-  root: document.body,
+  root: document.getElementById("pageScroll"),
   rootMargin: "-20% 0px -60% 0px"
 });
 
@@ -1647,5 +1693,5 @@ html = (
 components.html(
     html,
     height=850,
-    scrolling=True
+    scrolling=False
 )
