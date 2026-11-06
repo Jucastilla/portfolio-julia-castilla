@@ -369,25 +369,6 @@ section {
   color: #4F4073;
 }
 
-.logo-u {
-  position: relative;
-}
-
-.logo-u::before {
-  content: "";
-  position: absolute;
-  left: 25%;
-  top: 15%;
-  width: 22%;
-  height: 15%;
-  transform: rotate(-32deg);
-  border-radius: 100% 0 100% 0;
-  background: linear-gradient(
-    120deg,
-    #92CDED,
-    #B382CD
-  );
-}
 
 .menu {
   display: flex;
@@ -1179,7 +1160,7 @@ body {
     <a class="logo"
        href="#inicio"
        aria-label="Júlia Castilla, início">
-      J<span class="logo-u">u</span>lia Castilla
+      Júlia Castilla
     </a>
 
     <nav class="menu" id="menu">
