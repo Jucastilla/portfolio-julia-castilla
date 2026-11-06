@@ -618,7 +618,7 @@ section {
 }
 
 .service-card {
-  padding: 28px 27px 30px;
+  padding: 28px 23px 30px;
   min-height: 220px;
   background: #FFFFFF;
   border-radius: 22px;
@@ -703,9 +703,10 @@ section {
   color: #376B9A;
 }
 
+/* Tres colunas no desktop: cartoes mais largos, menos quebras de linha. */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(4,minmax(0,1fr));
+  grid-template-columns: repeat(3,minmax(0,1fr));
   gap: 20px;
 }
 
@@ -746,7 +747,7 @@ section {
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: 13px 9px 14px;
+  padding: 13px 7px 14px;
 }
 
 .project-body h3 {
@@ -816,7 +817,7 @@ section {
 .project-body p {
   text-align: left;
   text-align-last: left;
-  text-wrap: pretty;
+  text-wrap: wrap; /* evita que o navegador antecipe palavras para equilibrar linhas */
   hyphens: none;
   -webkit-hyphens: none;
   -ms-hyphens: none;
@@ -1163,7 +1164,7 @@ section {
   }
 
   .service-card {
-    padding: 23px 19px;
+    padding: 23px 17px;
   }
 }
 
