@@ -505,6 +505,13 @@ section {
 }
 
 
+@media (min-width: 761px) {
+  .social a .email-icon-mobile {
+    width: 29px;
+    height: 29px;
+  }
+}
+
 .hero-art {
   display: flex;
   justify-content: flex-end;
@@ -958,15 +965,11 @@ section {
   }
 
  
-/* O envelope original permanece no desktop; SVG roxo apenas no mobile. */
-.email-icon-mobile { display: none !important; }
-@media (max-width: 760px) {
-  .email-icon-desktop { display: none !important; }
-  .social a .email-icon-mobile {
-    display: block !important;
-    color: #3C2D5C;
-    stroke: #3C2D5C;
-  }
+/* Um único envelope SVG: no desktop maior, no mobile como aprovado. */
+.social a .email-icon-mobile {
+  display: block !important;
+  color: #3C2D5C;
+  stroke: #3C2D5C;
 }
 
  .hero-art {
@@ -1253,7 +1256,6 @@ body {
          target="_blank"
          rel="noopener noreferrer"
          aria-label="E-mail">
-        <span class="email-icon-desktop" aria-hidden="true">✉</span>
         <svg class="email-icon-mobile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
           <rect x="2" y="4" width="20" height="16" rx="2"/>
           <path d="m3 6 9 7 9-7"/>
