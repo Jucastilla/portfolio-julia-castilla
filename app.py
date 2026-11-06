@@ -1203,12 +1203,18 @@ body {
 }
 /* Espaço real DENTRO do contêiner rolável, após o último projeto.
    Evita que a barra inferior do navegador cubra o fim do último cartão. */
-/* Respiro ao final dos projetos no desktop, sem rodapé. */
+/* Acabamento desktop: respiro lilás de 100px e faixa branca de 80px.
+   Mobile mantém exatamente a reserva de rolagem já aprovada. */
 .mobile-scroll-end {
-  height: 280px;
+  height: 80px;
   flex-shrink: 0;
-  background: #FAF8FC;
+  background: #FFFFFF;
   pointer-events: none;
+}
+@media (min-width: 761px) {
+  .projects {
+    padding-bottom: 100px;
+  }
 }
 @media (max-width: 760px) {
   .mobile-scroll-end {
